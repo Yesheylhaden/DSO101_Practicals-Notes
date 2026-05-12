@@ -59,6 +59,7 @@ docker exec -it <name> bash                 # Access container terminal
 docker container list -a                    # List all containers (including stopped)
 docker restart <name>                       # Restart a container
 docker network list                         # List Docker networks
+docker stop $(docker ps -aq) && docker rm $(docker ps -aq)      # To delete all contiainers at once
 ```
 
 ---
